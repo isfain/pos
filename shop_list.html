@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zxx">
+   
+<head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Page Title -->
+      <title>Shop List</title>
+      <!-- dataTables CSS -->
+      <link type="text/css" rel="stylesheet" href="assets/plugins/dataTable/datatables.min.css">
+      <link type="text/css" rel="stylesheet" href="assets/plugins/dataTable/extensions/dataTables.jqueryui.min.css">
+      <!-- Main CSS -->	  
+      <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+      <!-- Favicon -->	
+      <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	  <!-- MDI CSS -->	 
+      <link type="text/css" rel="stylesheet" href="assets/plugins/mdi/css/materialdesignicons.min.css">
+      <link type="text/css" rel="stylesheet" href="assets/css/custom-style.css">
+   </head>
+   <body>
+      <!--================================-->
+      <!-- Page Container Start -->
+      <!--================================-->
+      <div class="page-container">
+         <!--================================-->
+         <!-- Page Sidebar Start -->
+         <!--================================-->
+         <div class="page-sidebar">
+            <div class="logo">
+               <a class="logo-img" href="index.html">		
+               <img class="desktop-logo" src="assets/images/logo.png" alt="">
+               <img class="small-logo" src="assets/images/small-logo.png" alt="">
+               </a>			
+               <a id="sidebar-toggle-button-close"><i class="wd-20" data-feather="x"></i> </a>
+            </div>
+            <!--================================-->
+            <!-- Sidebar Menu Start -->
+            <!--================================-->
+            <div class="page-sidebar-inner">
+               <div class="page-sidebar-menu">
+                  <ul class="accordion-menu">
+                     <li class="mg-l-20-force mg-t-25-force menu-navigation">Navigation</li>
+                     <li>
+                        <a href="#">
+							<i class="mdi mdi-view-dashboard"></i>
+							<span>Dashboard</span>
+						</a>
+                     </li>
+                     <li>
+                        <a href="shap_list.html">
+							<i class="mdi mdi-store"></i>
+							<span>Shop</span>
+						</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <!--/ Sidebar Menu End -->
+            <!--================================-->
+            <!-- Sidebar Footer Start -->
+            <!--================================-->
+            <div class="sidebar-footer">									
+               <a class="pull-left" href="#" data-toggle="tooltip" data-placement="top" data-original-title="Profile">
+               <i data-feather="user" class="wd-16"></i></a>									
+               <a class="pull-left " href="#" data-toggle="tooltip" data-placement="top" data-original-title="Mailbox">
+               <i data-feather="mail" class="wd-16"></i></a>
+               <a class="pull-left" href="#" data-toggle="tooltip" data-placement="top" data-original-title="Lockscreen">
+               <i data-feather="lock" class="wd-16"></i></a>
+               <a class="pull-left" href="#" data-toggle="tooltip" data-placement="top" data-original-title="Sing Out">
+               <i data-feather="log-out" class="wd-16"></i></a>
+            </div>
+            <!--/ Sidebar Footer End -->
+         </div>
+         <!--/ Page Sidebar End -->
+         <!--================================-->
+         <!-- Page Content Start -->
+         <!--================================-->
+         <div class="page-content">
+            <!--================================-->
+            <!-- Page Header Start -->
+            <!--================================-->
+            <div class="page-header">
+               <div class="search-form">
+                  <form action="#" method="GET">
+                     <div class="input-group">
+                        <input class="form-control search-input typeahead" name="search" placeholder="Type something..." type="text"/>
+                        <span class="input-group-btn"><span id="close-search"><i data-feather="x" class="wd-16"></i></span></span>
+                     </div>
+                  </form>
+               </div>
+               <nav class="navbar navbar-default">
+                  <!--================================-->
+                  <!-- Brand and Logo Start -->
+                  <!--================================-->
+                  <div class="navbar-header">
+                     <div class="navbar-brand">
+                        <ul class="list-inline">
+                           <!-- Mobile Toggle and Logo -->
+                           <li class="list-inline-item"><a class="hidden-md hidden-lg" href="#" id="sidebar-toggle-button"><i data-feather="menu" class="wd-20"></i></a></li>
+                           <!-- PC Toggle and Logo -->
+                           <li class="list-inline-item"><a class=" hidden-xs hidden-sm" href="#" id="collapsed-sidebar-toggle-button"><i data-feather="menu" class="wd-20"></i></a></li>
+                           <li class="list-inline-item mg-l-10"><a  href="#" id="search-button"><i data-feather="search" class="wd-20"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!--/ Brand and Logo End -->
+                  <!--================================-->
+                  <!-- Header Right Start -->
+                  <!--================================-->
+                  <div class="header-right pull-right">
+                     <ul class="list-inline justify-content-end">
+                        <!--================================-->
+                        <!-- Languages Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item dropdown hidden-xs">
+                           <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i class="flag-icon flag-icon-us"></i>
+                           </a>
+                           <ul class="dropdown-menu languages-dropdown">
+                              <li>
+                                 <a href="#" data-lang="en"><i class="flag-icon flag-icon-us mr-2"></i><span>English-US</span></a>
+                              </li>
+                              <li>
+                                 <a href="#" data-lang="es"><i class="flag-icon flag-icon-es mr-2"></i><span>Spanish</span></a>
+                              </li>
+                              <li>
+                                 <a href="#" data-lang="fr"><i class="flag-icon flag-icon-fr mr-2"></i><span>French</span></a>
+                              </li>
+                              <li>
+                                 <a href="#" data-lang="gr"><i class="flag-icon flag-icon-de mr-2"></i><span>German</span></a>
+                              </li>
+                              <li>
+                                 <a href="#" data-lang="ru"><i class="flag-icon flag-icon-ru mr-2"></i><span>Russian</span></a>
+                              </li>
+                              <li>
+                                 <a href="#" data-lang="ru"><i class="flag-icon flag-icon-gb mr-2"></i><span>English-UK</span></a>
+                              </li>
+                           </ul>
+                        </li>
+                        <!--/ Languages Dropdown End -->
+                        <!--================================-->
+                        <!-- Notifications Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item dropdown hidden-xs">
+                           <a class=" notification-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i data-feather="bell" class="wd-20"></i>
+                           <span class="notification-count wave in"></span>
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <!-- Top Notifications Area -->
+                              <div class="top-notifications-area">
+                                 <!-- Heading -->
+                                 <div class="notifications-heading">
+                                    <div class="heading-title">
+                                       <h6>Notifications</h6>
+                                    </div>
+                                    <span>5+ New Notifications</span>
+                                 </div>
+                                 <div class="notifications-box" id="notificationsBox">
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
+                                             <i data-feather="smile" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Your order is placed</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">System reboot has been successfully completed</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-warning">
+                                             <i data-feather="bell" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Document available</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">New user feedback received</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
+                                             <i data-feather="check-circle" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Payment failed!</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">New file has been uploaded</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
+                                             <i data-feather="info" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Document available</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">New order has been received</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-primary">
+                                             <i data-feather="info" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">New order available</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">New order has been received</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-success">
+                                             <i data-feather="smile" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Your order is placed</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">System reboot has been successfully completed</div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="#">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="wd-35 ht-35 mg-r-10 d-flex align-items-center justify-content-center rounded-circle card-icon-warning">
+                                             <i data-feather="bell" class="wd-20"></i>
+                                          </div>
+                                       </div>
+                                       <div class="wd-100p">
+                                          <div class="d-flex justify-content-between">
+                                             <h3 class="tx-13 tx-semibold mb-0">Document available</h3>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 12:32pm</span>
+                                          </div>
+                                          <div class="tx-gray-700">New user feedback received</div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="notifications-footer">
+                                    <a href="#">View all Notifications</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <!--/ Notifications Dropdown End -->
+                        <!--================================-->
+                        <!-- Messages Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item dropdown hidden-xs">
+                           <a class=" message-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <i data-feather="message-square" class="wd-20"></i>
+                           <span class="messages-count wave in"></span>
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <div class="top-message-area">
+                                 <div class="top-message-heading">
+                                    <div class="heading-title">
+                                       <h6>Messages</h6>
+                                    </div>
+                                    <span>5+ New Messages</span>
+                                 </div>
+                                 <div class="message-box" id="messageBox">
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-online">
+                                             <img src="assets/images/users-face/1.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Mary Adams</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 20, 22:21pm</span>
+                                             <div class="tx-gray-700">Congratulate! Socrates Itumayfor work anniversaries</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-online">
+                                             <img src="assets/images/users-face/2.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Richards Caleb</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 2, 22:21pm</span>
+                                             <div class="tx-gray-700">Richards Caleb, just created a new blog post</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-busy">
+                                             <img src="assets/images/users-face/3.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Lane Richards</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 12, 22:21pm</span>
+                                             <div class="tx-gray-700">Richards Caleb, just created a new blog post</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-busy">
+                                             <img src="assets/images/users-face/4.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Edward Lane</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 15, 02:21pm</span>
+                                             <div class="tx-gray-700">Adrian Monino, added new comment on your photo</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-offline">
+                                             <img src="assets/images/users-face/5.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Lane Richards</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 20, 08:28pm</span>
+                                             <div class="tx-gray-700">Edward Lane, added new comment on your photo</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                    <a class="dropdown-item list-group-item" href="javascript:void(0)">
+                                       <div class="d-flex justify-content-between">
+                                          <div class="pd-r-10">
+                                             <span class="avatar avatar-offline">
+                                             <img src="assets/images/users-face/6.png" class="img-fluid" alt="">
+                                             <i></i>
+                                             </span>
+                                          </div>
+                                          <div>
+                                             <span class="tx-semibold">Edward Lane</span>
+                                             <span class="small tx-gray-500 ft-right">Mar 21, 22:21pm</span>
+                                             <div class="tx-gray-700">Edward Lane, just created a new blog post</div>
+                                          </div>
+                                       </div>
+                                    </a>
+                                 </div>
+                                 <div class="top-message-footer">
+                                    <a href="#">View all Messages</a>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <!--/ Messages Dropdown End -->
+                        <!--================================-->
+                        <!-- Profile Dropdown Start -->
+                        <!--================================-->
+                        <li class="list-inline-item dropdown">
+                           <a  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           <img src="assets/images/users-face/1.png" class="img-fluid wd-30 ht-30 rounded-circle" alt="">
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-right dropdown-profile">
+                              <div class="user-profile-area">
+                                 <div class="user-profile-heading">
+                                    <div class="profile-thumbnail">
+                                       <img src="assets/images/users-face/1.png" class="img-fluid wd-35 ht-35 rounded-circle" alt="">
+                                    </div>
+                                    <div class="profile-text">
+                                       <h6>Ruhul Hasan</h6>
+                                       <span>email@example.com</span>
+                                    </div>
+                                 </div>
+                                 <a href="#" class="dropdown-item"><i data-feather="user" class="wd-16 mr-2"></i> My profile</a>
+                                 <a href="#" class="dropdown-item"><i data-feather="message-square" class="wd-16 mr-2"></i> Messages</a>
+                                 <a href="#" class="dropdown-item"><i data-feather="settings" class="wd-16 mr-2"></i> Settings</a>
+                                 <a href="#" class="dropdown-item"><i data-feather="activity" class="wd-16 mr-2"></i> My Activity</a>
+                                 <a href="#" class="dropdown-item"><i data-feather="download" class="wd-16 mr-2"></i> My Download</a>
+                                 <a href="#" class="dropdown-item"><i data-feather="life-buoy" class="wd-16 mr-2"></i> Support</a>
+                                 <a href="aut-logign-register.html" class="dropdown-item"><i data-feather="power" class="wd-16 mr-2"></i> Sign-out</a>
+                              </div>
+                           </div>
+                        </li>
+                        <!-- Profile Dropdown End -->
+                     </ul>
+                  </div>
+                  <!--/ Header Right End -->
+               </nav>
+            </div>
+            <!--/ Page Header End -->   
+            <!--================================-->
+            <!-- Page Inner Start -->
+            <!--================================-->
+            <div class="page-inner">
+               <!-- Wrapper -->
+               <div class="wrapper">
+                  <!--================================-->
+                  <!-- Breadcrumb Start -->
+                  <!--================================-->
+                  <div class="pageheader pd-t-25 pd-b-35">
+                     <div class="d-flex justify-content-between">
+                        <div class="clearfix">
+                           <div class="pd-t-5 pd-b-5">
+                              <h1 class="pd-0 mg-0 tx-20 tx-dark">Shop List</h1>
+                           </div>
+                           <div class="breadcrumb pd-0 mg-0">
+                              <a class="breadcrumb-item" href="#"><i class="icon ion-ios-home-outline"></i> Home</a>
+                              <a class="breadcrumb-item" href="#">Shop</a>
+                              <span class="breadcrumb-item active">List</span>
+                           </div>
+                        </div>
+						<div>
+							<button type="button" class="btn btn-outline-primary mg-t-5"><i class="mdi mdi-plus"></i>Add New Shop</button>
+						</div>
+                     </div>
+                  </div>
+                  <!--/ Breadcrumb End -->
+                  <div class="row clearfix">
+                     <!--================================-->
+                     <!-- Hoverable dataTable Start -->
+                     <!--================================-->
+                     <div class="col-md-12 col-lg-12">
+                        <div class="card mg-b-30">
+                           <div class="card-header">
+                              <div class="d-flex justify-content-between align-items-center">
+                                 <div>
+                                 </div>
+                                 <div class="text-right">
+                                    <div class="d-flex">
+                                       <a href="#" class="mr-3"><i class="ti-reload"></i></a>
+                                       <div class="dropdown" data-toggle="dropdown">
+                                          <a href="#"><i class="ti-more-alt"></i></a>
+                                          <div class="dropdown-menu dropdown-menu-right">
+											  <a href="#" class="dropdown-item"><i data-feather="info" class="wd-16 mr-2"></i>View Details</a>
+											  <a href="#" class="dropdown-item"><i data-feather="share" class="wd-16 mr-2"></i>Share</a>
+											  <a href="#" class="dropdown-item"><i data-feather="download" class="wd-16 mr-2"></i>Download</a>
+											  <a href="#" class="dropdown-item"><i data-feather="copy" class="wd-16 mr-2"></i>Copy to</a>
+											  <a href="#" class="dropdown-item"><i data-feather="folder" class="wd-16 mr-2"></i>Move to</a>
+											  <a href="#" class="dropdown-item"><i data-feather="edit" class="wd-16 mr-2"></i>Rename</a>
+											  <a href="#" class="dropdown-item"><i data-feather="trash" class="wd-16 mr-2"></i>Delete</a>
+										  </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body pd-0">
+                              <table id="hoverTable" class="table hover responsive nowrap">
+                                 <thead>
+                                    <tr>
+                                       <th>Name</th>
+                                       <th>Position</th>
+                                       <th>Office</th>
+                                       <th>Age</th>
+                                       <th>Start date</th>
+                                       <th>Salary</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>Tiger Nixon</td>
+                                       <td>System Architect</td>
+                                       <td>Edinburgh</td>
+                                       <td>61</td>
+                                       <td>2011/04/25</td>
+										<td class="text-right table-actions">
+											<a class="table-action  mg-r-10" href="#"><i class="fa fa-pencil"></i></a>
+											<a class="table-action  mg-r-10" href="#"><i class="fa fa-trash"></i></a>
+											<span class="dropdown-toggle " data-toggle="dropdown"></span>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="#"><i class="fa fa-book"></i> Details</a>
+												<a class="dropdown-item" href="#"><i class="fa fa-link"></i> Add file</a>
+												<a class="dropdown-item" href="#"><i class="fa fa-bar-chart"></i> Performance</a>
+											</div>
+										</td>
+                                    </tr>
+                                 </tbody>
+                                 <tfoot>
+                                    <tr>
+                                       <th>Name</th>
+                                       <th>Position</th>
+                                       <th>Office</th>
+                                       <th>Age</th>
+                                       <th>Start date</th>
+                                       <th>Salary</th>
+                                    </tr>
+                                 </tfoot>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                     <!--/ Hoverable dataTable End -->	
+                  </div>
+                  <!--/ dataTables End -->
+               </div>
+               <!--/ Wrapper End -->
+            </div>
+            <!--/ Page Inner End -->
+            <!--================================-->
+            <!-- Page Footer Start -->	
+            <!--================================-->
+            <footer class="page-footer">
+               <div class="pd-t-4 pd-b-0 pd-x-20">
+                  <div class="tx-10 tx-uppercase tx-gray-500 tx-spacing-1">
+                     <p class="pd-y-10 mb-0">Copyright&copy; 2020 |  Created By  <a href="#" target="_blank">ISFAIN</a></p>
+                  </div>
+               </div>
+            </footer>
+            <!--/ Page Footer End -->		
+         </div>
+         <!--/ Page Content End -->
+      </div>
+      <!--/ Page Container End -->
+      <!--================================-->
+      <!-- Scroll To Top Start-->
+      <!--================================-->	
+      <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+      <!--/ Scroll To Top End -->
+      <!--================================-->
+      <!-- Footer Script -->
+      <!--================================-->
+      <script src="assets/plugins/jquery/jquery.min.js"></script>
+      <script src="assets/plugins/jquery-ui/jquery-ui.js"></script>
+      <script src="assets/plugins/popper/popper.js"></script>
+      <script src="assets/plugins/feather/feather.min.js"></script>
+      <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/plugins/typeahead/typeahead.js"></script>
+      <script src="assets/plugins/typeahead/typeahead-active.js"></script>
+      <script src="assets/plugins/pace/pace.min.js"></script>
+      <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+      <script src="assets/plugins/highlight/highlight.min.js"></script>
+      <!-- dataTables Script -->
+      <script src="assets/plugins/dataTable/datatables.min.js"></script>
+      <script src="assets/plugins/dataTable/responsive/dataTables.responsive.js"></script>
+      <script src="assets/plugins/dataTable/extensions/dataTables.jqueryui.min.js"></script>
+      <!-- Required Script -->
+      <script src="assets/js/app.js"></script>
+      <script src="assets/js/avesta.js"></script>
+      <script src="assets/js/avesta-customizer.js"></script>
+      <script>
+         // Basic DataTable	
+          $('#basicDataTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+         // No Style DataTable	
+          $('#noStyleedTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+         // Cell Border DataTable	
+          $('#cellBorder').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+         // Compact DataTable	
+          $('#compactTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+         // Hoverable DataTable	
+          $('#hoverTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+         // Hoverable DataTable	
+          $('#orderActiveTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	},
+         	"order": [[ 1, "desc" ]]
+           });
+         
+         // Scrollable Table DataTable	
+          $('#scrollableTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	},
+         	"order": [[ 1, "desc" ]],
+         	"scrollY":        "250px",
+         	"scrollCollapse": true,
+         	"paging":         false
+           });
+      </script>
+   </body>
+
+</html>
