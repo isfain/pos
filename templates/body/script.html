@@ -1,0 +1,35 @@
+{% load static %}
+ <!--================================-->
+    <!-- Footer Script -->
+    <!--================================-->
+      <script src=" {% static 'pos/assets/plugins/jquery/jquery.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/jquery-ui/jquery-ui.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/popper/popper.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/feather/feather.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/typeahead/typeahead.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/typeahead/typeahead-active.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/pace/pace.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/highlight/highlight.min.js' %}"></script>
+      <!-- dataTables Script -->
+      <script src=" {% static 'pos/assets/plugins/dataTable/datatables.min.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/dataTable/responsive/dataTables.responsive.js' %}"></script>
+      <script src=" {% static 'pos/assets/plugins/dataTable/extensions/dataTables.jqueryui.min.js' %}"></script>
+      <!-- Required Script -->
+      <script src=" {% static 'pos/assets/js/app.js' %}"></script>
+      <script src=" {% static 'pos/assets/js/avesta.js' %}"></script>
+      <script src=" {% static 'pos/assets/js/avesta-customizer.js' %}"></script>
+      <script>
+         
+           
+         // Hoverable DataTable	
+          $('#hoverTable').DataTable({
+         	responsive: true,
+         	language: {
+         	  searchPlaceholder: 'Search...',
+         	  sSearch: ''
+         	}
+           });
+           
+      </script>
