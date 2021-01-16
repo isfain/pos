@@ -1,1 +1,2 @@
-web: gunicorn pos.wsgi --log-file -
+release: Python manage.py migrate --noinput 
+web: gunicorn pos.wsgi

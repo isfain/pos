@@ -26,7 +26,7 @@ SECRET_KEY = 'z@4-^o-+*oesgar-1&wj7x_@muamziudpzneh5gbmfze^n579e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://karachiclothe.herokuapp.com/'.*]
 
 
 # Application definition
